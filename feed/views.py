@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView
 from .models import MaintenanceTicket
 
 class HomePageView(ListView):
-    template_name = 'home.html'
+    template_name = 'feed/home.html'
     http_method_names = ["get"]
     model = MaintenanceTicket
     context_object_name = "maintenance_tickets"

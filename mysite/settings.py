@@ -15,6 +15,10 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(SETTINGS_DIR)
+TEMPLATES_DIR = f"{SETTINGS_DIR}/templates"
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -28,8 +32,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # TEMPLATES_DIR = f'{BASE_DIR}/templates/'
-ABS_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES_DIR = f"{ABS_DIR}/templates"
 
 # Application definition
 
@@ -59,7 +61,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [PROJECT_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
