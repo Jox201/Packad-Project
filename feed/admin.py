@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Post
+from .models import MaintenanceTicket
 
-class PostAdmin(admin.ModelAdmin):
+class MaintenanceTicketAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Post, PostAdmin)
+admin.site.register(MaintenanceTicket, MaintenanceTicketAdmin)
