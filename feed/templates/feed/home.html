@@ -1,1 +1,10 @@
-hereeeee
+{% extends 'base.html' %}
+
+{% block title %}Maintenance Ticket Homepage{% endblock title %}
+
+{% block body %}
+    {% for ticket in maintenance_tickets %}
+        <div>ID:  {{ticket.id}} - Location: {{ticket.location}} - Description:  {{ticket.description}} - Issuer:  {{ticket.issuer}}</div>
+        <hr>
+    {% endfor %}
+{% endblock body %}
